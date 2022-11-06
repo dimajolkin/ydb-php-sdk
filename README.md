@@ -1,3 +1,16 @@
+# Copy RP 
+
+Так как в облаке по видимому забили на поддержку библиотеки, временно перенёс в эту ветку нужные изменения
+для установки использовать
+
+```bash
+  composer require dimajolkin/ydb-php-sdk:dev-fix
+```
+
+1. https://github.com/bashkarev/ydb-php-sdk/tree/anonymous - возможность ананимной авторизации
+2. https://github.com/yandex-cloud/ydb-php-sdk/pull/22
+
+
 YDB PHP SDK provides access to Yandex Database cloud services from PHP code.
 
 Yandex Database is a distributed fault-tolerant DBMS with high availability and scalability, strict consistency and ACID. An SQL dialect – YQL – is used for queries.
@@ -31,6 +44,7 @@ Yandex Database supports the following authentication methods:
 - JWT + private key
 - JWT + JSON file
 - Metadata URL
+- Anonymous
 
 ## OAuth token
 
@@ -159,7 +173,27 @@ $config = [
 $ydb = new Ydb($config);
 
 ```
+## Anonymous
 
+```php
+<?php
+use YandexCloud\Ydb\Ydb;
+$config = [
+    // Database path
+    'database'    => '/local',
+    // Database endpoint
+    'endpoint'    => 'localhost:2135',
+    // Auto discovery (dedicated server only)
+    'discovery'   => false,
+    // IAM config
+    'iam_config'  => [
+        'anonymous' => true,
+        // Allow insecure grpc connection, default false
+        'insecure' => false,
+    ],
+];
+$ydb = new Ydb($config);
+```
 
 # Usage
 
