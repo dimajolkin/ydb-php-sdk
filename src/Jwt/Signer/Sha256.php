@@ -2,6 +2,7 @@
 
 namespace YandexCloud\Ydb\Jwt\Signer;
 
+use Lcobucci\JWT\Signer\InvalidKeyProvided;
 use Lcobucci\JWT\Signer\Key as SignerKey;
 use Lcobucci\JWT\Signer\OpenSSL;
 
@@ -82,5 +83,10 @@ class Sha256 extends OpenSSL
     public function algorithm(): int
     {
         return OPENSSL_ALGO_SHA256;
+    }
+
+    protected function guardAgainstIncompatibleKey(int $type, int $lengthInBits): void
+    {
+        // TODO: Implement guardAgainstIncompatibleKey() method.
     }
 }
