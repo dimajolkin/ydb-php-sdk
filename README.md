@@ -1,7 +1,14 @@
 # Copy RP 
 
-1. https://github.com/bashkarev/ydb-php-sdk/tree/anonymous
-2. 
+Так как в облаке по видимому забили на поддержку библиотеки, временно перенёс в эту ветку нужные изменения
+для установки использовать
+
+```bash
+  composer require dimajolkin/ydb-php-sdk:dev-fix
+```
+
+1. https://github.com/bashkarev/ydb-php-sdk/tree/anonymous - возможность ананимной авторизации
+2. https://github.com/yandex-cloud/ydb-php-sdk/pull/22
 
 
 YDB PHP SDK provides access to Yandex Database cloud services from PHP code.
