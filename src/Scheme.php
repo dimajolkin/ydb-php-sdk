@@ -113,7 +113,7 @@ class Scheme
      * @param array $actions
      * @return bool|mixed|void|null
      */
-    public function modifyPermissions($path = '', array $actions)
+    public function modifyPermissions($path = '', array $actions = [])
     {
         $path = rtrim($this->database . '/' . $path, '/');
         $result = $this->request('ModifyPermissions', [
