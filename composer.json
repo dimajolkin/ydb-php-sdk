@@ -1,5 +1,5 @@
 {
-    "name": "yandex-cloud/ydb-php-sdk",
+    "name": "dimajolkin/fix-ydb-php-sdk",
     "description": "Yandex Database SDK (PHP)",
     "license": "Apache-2.0",
     "authors": [
