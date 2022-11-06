@@ -4,7 +4,7 @@
 для установки использовать
 
 ```bash
-  composer require dimajolkin/fix-ydb-php-sdk:dev-main
+  composer require dimajolkin/ydb-php-sdk:dev-main
 ```
 
 1. https://github.com/bashkarev/ydb-php-sdk/tree/anonymous - возможность ананимной авторизации
